@@ -10,7 +10,12 @@ import {
 
 // Import the CORS plugin for Fastify
 import { fastifyCors } from "@fastify/cors";
+
+// Import the environment variables configuration
 import { env } from "./env.ts";
+
+// Import the database connection pool
+import { sql } from "../db/connection.ts";
 
 // Create the Fastify app and set Zod as the type provider
 const app = fastify().withTypeProvider<ZodTypeProvider>();
